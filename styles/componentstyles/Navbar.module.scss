@@ -1,0 +1,273 @@
+// Variables
+$heading_font: "Quattrocento", serif;
+$body_font: "Fanwood Text", serif;
+$primary_color: #d68b95;
+$primary_light: #d58a94;
+
+// mixins
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  background-color: transparent;
+}
+
+.navbar_container.scrolled {
+  background-color: hsl(352 48% 69%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+// Main Nav Links
+
+.navbar {
+  @include flex;
+  justify-content: space-between;
+  padding: 1.3em 0;
+  transition: all ease-in-out 250ms;
+
+  &_logo {
+    font-family: $heading_font;
+    font-size: 2.5rem;
+    @include flex;
+    flex-direction: column;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+
+    h3 {
+      letter-spacing: 3px;
+      font-size: 2.7rem;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      letter-spacing: 5px;
+    }
+  }
+
+  &_list {
+    @include flex;
+    gap: 2em;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: #fff;
+      font-family: $body_font;
+      position: relative;
+      letter-spacing: 1.5px;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 200ms ease-in;
+    }
+
+    a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+.scrolled .navbar {
+  padding: 1em 0;
+  transition: all ease-in-out 250ms;
+
+  &_logo {
+    flex-direction: row;
+    gap: 0.2em;
+
+    h3 {
+      letter-spacing: 5px;
+      font-size: 2.2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .scrolled .navbar {
+    padding: 0.8em 0;
+
+    &_logo {
+      flex-direction: row;
+      gap: 0.1em;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &_list {
+      gap: 1em;
+
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar {
+    padding: 1.6em 0;
+    &_logo {
+      flex-direction: row;
+      align-items: baseline;
+      gap: 0.1em;
+
+      h3 {
+        letter-spacing: 1px;
+        font-size: 1.8rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  .scrolled .navbar {
+    &_list {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .navbar_list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: min(30vh, 10rem) 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 0 0 10%;
+    background-color: $primary_color;
+    gap: 0;
+    transform: translateX(125rem);
+    transition: transform ease-in-out 950ms, opacity linear 300ms;
+
+    li {
+      width: 100%;
+    }
+
+    @for $i from 1 through 5 {
+      .nav_link_#{$i} {
+        transform: translateY(125rem);
+        opacity: 0;
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .nav_link_#{$i}.link_true {
+        transform: translateY(0);
+        opacity: 1;
+        transition: all ease-in-out 950ms + (100 * $i);
+      }
+    }
+
+    a {
+      display: block;
+      padding: 1em 1.5em;
+      font-size: 1.5rem;
+    }
+
+    a::after {
+      position: static;
+    }
+  }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    .navbar_list {
+      background: hsl(352 25% 54% / 0.7);
+      backdrop-filter: blur(1rem);
+    }
+  }
+}
+
+.navbar_list.menu_true {
+  transform: translateX(0);
+}
+
+// menu toggle
+
+.menu_toggle {
+  display: none;
+  font-size: 1rem;
+  border: 0;
+  background: 0;
+  padding: 1em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu_toggle::-moz-focus-inner {
+  border: 0;
+}
+
+.hamburger,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  background: #fff;
+  height: 3px;
+  width: 1.75rem;
+  border-radius: 3px;
+  transition: transform ease-in-out 750ms, opacity linear 750ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+/* For extremely small screen devices (750px and below) */
+@media only screen and (max-width: 750px) {
+  .menu_toggle {
+    display: block;
+  }
+}

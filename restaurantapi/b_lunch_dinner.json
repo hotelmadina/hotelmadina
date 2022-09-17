@@ -1,0 +1,74 @@
+{
+  "id": 2,
+  "foodTime": "lunch & dinner",
+  "timings": {
+    "from": "12:00PM",
+    "to": "12:00AM"
+  },
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Paneer Butter Masala",
+      "para": "Delicious Paneer Butter Masala made by experts",
+      "price": 120,
+      "img": "/paneer-butter-masala.jpg",
+      "alt": "hotel madina paneer butter masala"
+    },
+    {
+      "id": 2,
+      "name": "Khoya Paneer",
+      "para": "Delicious Khoya Paneer Dish made by experts",
+      "price": 120,
+      "img": "/khoya-paneer.jpg",
+      "alt": "hotel madina khoya paneer dish"
+    },
+    {
+      "id": 3,
+      "name": "Kadai Paneer",
+      "para": "Delicious Kadai Paneer Dish made by experts",
+      "price": 120,
+      "img": "/paneer-butter-masala.jpg",
+      "alt": "hotel madina khoya paneer dish"
+    },
+    {
+      "id": 4,
+      "name": "Malai Kofta",
+      "para": "Delicious Malai Kofta Dish made by experts",
+      "price": 130,
+      "img": "/khoya-paneer.jpg",
+      "alt": "malai kofta"
+    },
+    {
+      "id": 5,
+      "name": "Mutter Paneer",
+      "para": "Delicious Mutter Paneer made by experts",
+      "price": 100,
+      "img": "/mutter-paneer.jpg",
+      "alt": "mutter paneer"
+    },
+    {
+      "id": 6,
+      "name": "Paneer Mix Veg",
+      "para": "Delicious Paneer Mix Veg made by experts",
+      "price": 100,
+      "img": "/mix-veg.jpg",
+      "alt": "mix veg"
+    },
+    {
+      "id": 7,
+      "name": "Chana Masala",
+      "para": "Delicious Chana Masala Veg made by experts",
+      "price": 110,
+      "img": "/chana-masala.jpg",
+      "alt": "hotel madina chana masala"
+    },
+    {
+      "id": 8,
+      "name": "Shahi Paneer",
+      "para": "Delicious Shahi Paneer made by experts",
+      "price": 120,
+      "img": "/khoya-paneer.jpg",
+      "alt": "hotel madina shahi paneer"
+    }
+  ]
+}

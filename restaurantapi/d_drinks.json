@@ -1,0 +1,42 @@
+{
+  "id": 4,
+  "foodTime": "drinks",
+  "timings": {
+    "from": "",
+    "to": ""
+  },
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Milk 200ml",
+      "para": "Purest Buffalo Milk will be served on order.",
+      "price": 25,
+      "img": "/milk.jpg",
+      "alt": "hotel madina milk"
+    },
+    {
+      "id": 2,
+      "name": "Tea",
+      "para": "Start your day with Special Indian Tea",
+      "price": 15,
+      "img": "/tea.jpg",
+      "alt": "hotel madina tea"
+    },
+    {
+      "id": 3,
+      "name": "Lemon Tea",
+      "para": "Start your day with Special Indian Lemon Tea",
+      "price": 15,
+      "img": "/lemon-tea.jpg",
+      "alt": "hotel madina lemon tea"
+    },
+    {
+      "id": 4,
+      "name": "Coffee",
+      "para": "Start your day with Special Coffee",
+      "price": 20,
+      "img": "/coffee.jpg",
+      "alt": "hotel madina coffee"
+    }
+  ]
+}

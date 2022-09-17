@@ -1,0 +1,106 @@
+{
+  "id": 1,
+  "foodTime": "breakfast",
+  "timings": {
+    "from": "7:00AM",
+    "to": "12:00PM"
+  },
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Butter Toast",
+      "para": "Crisp Toast with Fresh butter to start your day",
+      "price": 25,
+      "img": "/butter-toast.jpg",
+      "alt": "hotel madina butter toast"
+    },
+    {
+      "id": 2,
+      "name": "Jam Toast",
+      "para": "Crisp Toast with Fresh Jam to start your day",
+      "price": 25,
+      "img": "/jam-toast.jpg",
+      "alt": "hotel madina jam toast"
+    },
+    {
+      "id": 3,
+      "name": "Plain Toast",
+      "para": "Crisp Plain Toast to start your day",
+      "price": 15,
+      "img": "/plain-toast.jpg",
+      "alt": "hotel madina plain toast"
+    },
+    {
+      "id": 4,
+      "name": "Aloo Paratha",
+      "para": "Start your day with Aloo Paratha",
+      "price": 35,
+      "img": "/aloo-paratha.jpg",
+      "alt": "hotel madina aloo paratha"
+    },
+    {
+      "id": 5,
+      "name": "Paneer Paratha",
+      "para": "Start your day with Paneer Paratha",
+      "price": 45,
+      "img": "/paneer-paratha.jpg",
+      "alt": "paneer paratha"
+    },
+    {
+      "id": 6,
+      "name": "Gobi Paratha",
+      "para": "Start your day with Gobi Paratha",
+      "price": 40,
+      "img": "/aloo-paratha.jpg",
+      "alt": "gobi paratha"
+    },
+    {
+      "id": 7,
+      "name": "Onion Paratha",
+      "para": "Start your day with Onion Paratha",
+      "price": 40,
+      "img": "/paneer-paratha.jpg",
+      "alt": "onion paratha"
+    },
+    {
+      "id": 8,
+      "name": "Plain Paratha",
+      "para": "Start your day with Paratha",
+      "price": 20,
+      "img": "/aloo-paratha.jpg",
+      "alt": "paratha"
+    },
+    {
+      "id": 9,
+      "name": "Omelette",
+      "para": "Start your day with heathy omelette",
+      "price": 45,
+      "img": "/omelette.jpg",
+      "alt": "hotel madina omelette"
+    },
+    {
+      "id": 10,
+      "name": "Half Fry",
+      "para": "Start your day with heathy Half Fried Egg",
+      "price": 25,
+      "img": "/half-fry.jpg",
+      "alt": "hotel madina half fry"
+    },
+    {
+      "id": 11,
+      "name": "Boiled Egg",
+      "para": "Start your day with heathy Boiled Egg",
+      "price": 20,
+      "img": "/boiled-egg.jpg",
+      "alt": "hotel madina boiled egg"
+    },
+    {
+      "id": 12,
+      "name": "Curd",
+      "para": "Start your day with Curd",
+      "price": "---",
+      "img": "/curd.jpg",
+      "alt": "hotel madina curd"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+$heading_font: "Quattrocento", serif;
+$body_font: "Fanwood Text", serif;
+$main_color: hsl(352 48% 69%);
+$svg_filter: invert(100%) sepia(0%) saturate(35%) hue-rotate(256deg)
+  brightness(107%) contrast(100%);
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+.main_container {
+  background-color: $main_color;
+}
+
+.img_container {
+  position: relative;
+}
+
+.booking_container {
+  @include flex;
+  justify-content: space-between;
+  padding: 3.5rem 0;
+
+  .heading_container,
+  .number_container {
+    @include flex;
+    flex-grow: 1;
+    gap: 1em;
+  }
+
+  .heading_container {
+    justify-content: flex-start;
+    .img_container {
+      width: 7%;
+      height: 3rem;
+    }
+  }
+
+  .arrows_container {
+    @include flex;
+    .img_container {
+      width: 2rem;
+      height: 3rem;
+    }
+  }
+
+  .number_container {
+    justify-content: flex-end;
+    .img_container {
+      width: 7%;
+      height: 3rem;
+    }
+  }
+
+  h2 {
+    font-family: $heading_font;
+    font-size: 2.2rem;
+    color: #fff;
+  }
+}
+
+.icons {
+  width: 3em;
+  filter: $svg_filter;
+}
+
+@media only screen and (max-width: 850px) {
+  .booking_container {
+    .heading_container {
+      .img_container {
+        width: 14%;
+      }
+    }
+
+    .number_container {
+      .img_container {
+        width: 9%;
+      }
+    }
+
+    .arrows_container {
+      .img_container {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .booking_container {
+    flex-direction: column;
+    padding: 1.5rem 0;
+    gap: 0.7em;
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    .heading_container,
+    .number_container {
+      justify-content: flex-start;
+      gap: 1em;
+      width: 100%;
+    }
+
+    .heading_container {
+      .img_container {
+        width: 9%;
+      }
+    }
+
+    .number_container {
+      .img_container {
+        width: 7%;
+      }
+    }
+  }
+}

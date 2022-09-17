@@ -1,0 +1,189 @@
+$heading_font: "Quattrocento", serif;
+$body_font: "Fanwood Text", serif;
+$primary_color: #d68a94;
+$primary_light: #d58a94;
+$text_font_size: 1.3rem;
+$svg_filter: invert(100%) sepia(0%) saturate(35%) hue-rotate(256deg)
+  brightness(107%) contrast(100%);
+
+@mixin flex($alignment) {
+  display: flex;
+  align-items: $alignment;
+}
+
+.main_container {
+  background-color: $primary_color;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "logo_eng quick_links contact logo_hindi";
+  row-gap: 2em;
+  padding: 3.5rem 0;
+
+  .logo_column {
+    grid-area: logo_eng;
+  }
+
+  .hindi_brand_column {
+    grid-area: logo_hindi;
+  }
+
+  .footer_logo {
+    font-family: $heading_font;
+    font-size: 2.5rem;
+    @include flex(center);
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+
+    h3 {
+      letter-spacing: 3px;
+      font-size: 3.7rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 5px;
+    }
+  }
+
+  .footer_logo_hindi {
+    h3 {
+      letter-spacing: 3px;
+      font-size: 5.7rem;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      letter-spacing: 5px;
+    }
+  }
+
+  .quick_link_column {
+    @include flex(center);
+    flex-direction: column;
+    gap: 0.8em;
+    grid-area: quick_links;
+    h3 {
+      font-family: $heading_font;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    ul {
+      @include flex(center);
+      flex-direction: column;
+      place-items: center;
+      gap: 0.5em;
+      list-style: none;
+
+      li {
+        a {
+          position: relative;
+          font-family: $body_font;
+          font-size: $text_font_size;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 200ms ease-in;
+        }
+
+        a:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+  }
+
+  .contact_column {
+    @include flex(flex-start);
+    flex-direction: column;
+    gap: 1em;
+    grid-area: contact;
+
+    .contact_item {
+      @include flex(flex-start);
+      gap: 1em;
+      width: 100%;
+    }
+
+    .icon_container {
+      position: relative;
+      width: 5%;
+      height: 1.3rem;
+    }
+
+    span {
+      font-family: $body_font;
+      font-size: $text_font_size;
+      color: #fff;
+    }
+  }
+}
+
+.icons {
+  width: 3em;
+  filter: $svg_filter;
+}
+
+@media only screen and (max-width: 850px) {
+  .grid_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "contact quick_links"
+      "logo_eng logo_hindi";
+
+    .quick_link_column {
+      ul {
+        flex-direction: row;
+      }
+    }
+
+    .footer_logo_hindi {
+      h3 {
+        font-size: 5rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo_eng"
+      "quick_links"
+      "logo_hindi"
+      "contact";
+
+    .quick_link_column {
+      align-items: flex-start;
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

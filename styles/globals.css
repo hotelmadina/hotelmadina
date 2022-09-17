@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+/* Scrollbar Design */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(352 48% 69%);
+}
+
+@supports (scrollbar-color: hsl(352 48% 69%) #fff) {
+  * {
+    scrollbar-color: hsl(352 48% 69%) #fff;
+    scrollbar-width: thin;
+  }
+}

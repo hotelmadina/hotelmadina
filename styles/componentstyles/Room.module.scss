@@ -1,0 +1,128 @@
+$heading_font: "Quattrocento", serif;
+$body_font: "Fanwood Text", serif;
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 5em 0;
+  column-gap: 1.7em;
+
+  .heading_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 3.5rem;
+      font-family: $heading_font;
+      margin-bottom: 2.6rem;
+    }
+    p {
+      font-family: $body_font;
+    }
+  }
+
+  .rooms_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.7rem;
+    color: #fff;
+
+    .room {
+      position: relative;
+
+      &:hover .room_details {
+        transform: translateY(-1rem);
+        opacity: 1;
+      }
+
+      .img_container {
+        position: relative;
+        width: 100%;
+        height: 13rem;
+      }
+
+      .room_details {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        font-family: $body_font;
+        background-color: hsl(352 48% 69% / 0.955);
+        padding: 0.5em;
+
+        transform: translateY(2rem);
+        opacity: 0;
+
+        transition: all 250ms ease-in-out;
+
+        h4 {
+          font-family: $heading_font;
+          font-size: 1.1rem;
+          font-weight: bolder;
+        }
+
+        span {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .grid_container {
+    .rooms_container {
+      .room {
+        .img_container {
+          height: 10rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+    row-gap: 2.7em;
+
+    .heading_container {
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    .rooms_container {
+      grid-template-columns: 1fr 1fr;
+
+      .room {
+        .img_container {
+          height: 14rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .grid_container {
+    .heading_container {
+      h2 {
+        font-size: 2.1rem;
+      }
+    }
+    .rooms_container {
+      grid-template-columns: 1fr;
+
+      .room {
+        .img_container {
+          height: 15rem;
+        }
+        .room_details {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

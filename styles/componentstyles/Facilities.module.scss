@@ -1,0 +1,98 @@
+$svg_filter: invert(100%) sepia(6%) saturate(5737%) hue-rotate(337deg)
+  brightness(87%) contrast(88%);
+$heading_font: "Quattrocento", serif;
+$body_font: "Fanwood Text", serif;
+
+.main_container {
+  padding: 5em 0;
+}
+
+.heading {
+  text-align: center;
+  h2 {
+    font-size: 3.5rem;
+    font-family: $heading_font;
+    margin-bottom: 2.6rem;
+  }
+}
+
+.facility_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  .facility {
+    padding: 1.5em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    border-radius: 1em;
+    transition: all 250ms ease-in-out;
+
+    .img_container {
+      position: relative;
+      width: 100%;
+      height: 10rem;
+    }
+
+    p {
+      font-weight: bolder;
+      font-family: $heading_font;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      border: 0;
+      transform: scale(1.02);
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    &:hover .icons {
+      filter: invert(73%) sepia(7%) saturate(2713%) hue-rotate(306deg)
+        brightness(89%) contrast(88%);
+    }
+  }
+}
+
+.icons {
+  width: 3em;
+  filter: $svg_filter;
+  transition: all ease-in 250ms;
+}
+
+@media only screen and (max-width: 950px) {
+  .facility_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icons {
+    filter: invert(73%) sepia(7%) saturate(2713%) hue-rotate(306deg)
+      brightness(89%) contrast(88%);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .heading {
+    h2 {
+      font-size: 2.1rem;
+    }
+  }
+  .facility_grid {
+    .facility {
+      .img_container {
+        height: 5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .facility_grid {
+    .facility {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

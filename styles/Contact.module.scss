@@ -1,0 +1,188 @@
+$heading_font: "Quattrocento", serif;
+$body_font: "Fanwood Text", serif;
+$primary_color: hsl(352 48% 69%);
+$text_font_size: 1.3rem;
+$svg_filter: invert(92%) sepia(22%) saturate(3205%) hue-rotate(295deg)
+  brightness(84%) contrast(79%);
+
+@mixin flex($alignment) {
+  display: flex;
+  align-items: $alignment;
+}
+
+.hero_img {
+  height: 50vh;
+  width: 100%;
+  transition: 250ms;
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+  @include flex(center);
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/contact.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+  }
+
+  .cta_container {
+    position: relative;
+    font-family: $heading_font;
+    @include flex(center);
+    height: 32%;
+
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5em 0;
+
+  .address_details {
+    @include flex(flex-start);
+    flex-direction: column;
+    gap: 2em;
+
+    .heading_para {
+      h2 {
+        font-family: $heading_font;
+        font-weight: bolder;
+        font-size: 2.1rem;
+        margin-bottom: 0.2em;
+      }
+
+      .para {
+        font-family: $body_font;
+        font-size: 1.3rem;
+        color: #333;
+      }
+    }
+
+    .contact_column {
+      @include flex(flex-start);
+      flex-direction: column;
+      gap: 1em;
+
+      .contact_item {
+        @include flex(flex-start);
+        gap: 1em;
+        width: 100%;
+      }
+
+      .icon_container {
+        position: relative;
+        width: 5%;
+        height: 1.3rem;
+      }
+
+      span {
+        font-family: $body_font;
+        font-size: $text_font_size;
+        color: #333;
+      }
+    }
+  }
+
+  .form {
+    @include flex(flex-start);
+    flex-direction: column;
+    gap: 1em;
+
+    .bot_field_input {
+      display: none;
+    }
+
+    input,
+    textarea {
+      font-size: 1.3rem;
+      padding: 0.5em;
+      font-family: $heading_font;
+      outline: none;
+      border: 1px solid #ccc;
+      width: 100%;
+
+      &:focus {
+        outline: 1px solid $primary_color;
+      }
+    }
+
+    textarea {
+      height: 7em;
+    }
+
+    .name_inputs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+      width: 100%;
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 0.6em;
+      font-family: $heading_font;
+      border: none;
+      background-color: $primary_color;
+      color: #fff;
+    }
+  }
+}
+
+.icons {
+  width: 3em;
+  filter: $svg_filter;
+}
+
+@media only screen and (max-width: 1025px) {
+  .hero_img {
+    .cta_container {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .grid_container {
+    .form {
+      .name_inputs {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .hero_img {
+    .cta_container {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
