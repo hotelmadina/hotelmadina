@@ -1,7 +1,6 @@
 {
-  "id": 5,
-  "name": "AC Double Bed Room",
-  "price": 949,
-  "img": "/hotel-room-6.jpg",
-  "alt": "hotel madina air conditioned double bed room"
+  "id": 4,
+  "name": "Double Bed Cooler",
+  "img": "/rooms/double_bed_1.jpg",
+  "alt": "hotel madina double bed cooler room"
 }

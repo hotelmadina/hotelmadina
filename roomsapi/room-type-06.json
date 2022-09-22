@@ -1,7 +1,6 @@
 {
-  "id": 6,
-  "name": "AC Four Bed",
-  "price": 1299,
-  "img": "/hotel-room-1.jpg",
-  "alt": "hotel madina air conditioned four bed room"
+  "id": 5,
+  "name": "Double Bed AC",
+  "img": "/rooms/double_bed_ac_1.jpg",
+  "alt": "hotel madina double bed ac 2"
 }

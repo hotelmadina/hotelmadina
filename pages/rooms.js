@@ -36,7 +36,6 @@ const Rooms = ({ setToggleMenu, rooms }) => {
                   </div>
                   <div className={styles.room_front_details}>
                     <h2>{room.name}</h2>
-                    <p className={styles.room_price}>₹{room.price}/Day</p>
                   </div>
                 </div>
               );

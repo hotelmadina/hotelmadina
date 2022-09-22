@@ -1,7 +1,6 @@
 {
   "id": 1,
-  "name": "Single Bed",
-  "price": 349,
-  "img": "/hotel-room-2.jpg",
-  "alt": "hotel madina single bed room"
+  "name": "Double Bed",
+  "img": "/rooms/double_bed.jpg",
+  "alt": "hotel madina double bed room"
 }

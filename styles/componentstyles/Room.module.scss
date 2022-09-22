@@ -17,6 +17,7 @@ $body_font: "Fanwood Text", serif;
       margin-bottom: 2.6rem;
     }
     p {
+      font-size: 1.5em;
       font-family: $body_font;
     }
   }
@@ -48,7 +49,7 @@ $body_font: "Fanwood Text", serif;
         left: 0;
         font-family: $body_font;
         background-color: hsl(352 48% 69% / 0.955);
-        padding: 0.5em;
+        padding: 1em;
 
         transform: translateY(2rem);
         opacity: 0;
@@ -109,6 +110,9 @@ $body_font: "Fanwood Text", serif;
     .heading_container {
       h2 {
         font-size: 2.1rem;
+      }
+      p {
+        font-size: 1.3em;
       }
     }
     .rooms_container {

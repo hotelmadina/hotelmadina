@@ -11,7 +11,7 @@
       "name": "Paneer Butter Masala",
       "para": "Delicious Paneer Butter Masala made by experts",
       "price": 120,
-      "img": "/paneer-butter-masala.jpg",
+      "img": "/restaurantitems/paneer-butter-masala.jpg",
       "alt": "hotel madina paneer butter masala"
     },
     {
@@ -19,7 +19,7 @@
       "name": "Khoya Paneer",
       "para": "Delicious Khoya Paneer Dish made by experts",
       "price": 120,
-      "img": "/khoya-paneer.jpg",
+      "img": "/restaurantitems/khoya-paneer.jpg",
       "alt": "hotel madina khoya paneer dish"
     },
     {
@@ -27,7 +27,7 @@
       "name": "Kadai Paneer",
       "para": "Delicious Kadai Paneer Dish made by experts",
       "price": 120,
-      "img": "/paneer-butter-masala.jpg",
+      "img": "/restaurantitems/paneer-butter-masala.jpg",
       "alt": "hotel madina khoya paneer dish"
     },
     {
@@ -35,7 +35,7 @@
       "name": "Malai Kofta",
       "para": "Delicious Malai Kofta Dish made by experts",
       "price": 130,
-      "img": "/khoya-paneer.jpg",
+      "img": "/restaurantitems/khoya-paneer.jpg",
       "alt": "malai kofta"
     },
     {
@@ -43,7 +43,7 @@
       "name": "Mutter Paneer",
       "para": "Delicious Mutter Paneer made by experts",
       "price": 100,
-      "img": "/mutter-paneer.jpg",
+      "img": "/restaurantitems/mutter-paneer.jpg",
       "alt": "mutter paneer"
     },
     {
@@ -51,7 +51,7 @@
       "name": "Paneer Mix Veg",
       "para": "Delicious Paneer Mix Veg made by experts",
       "price": 100,
-      "img": "/mix-veg.jpg",
+      "img": "/restaurantitems/mix-veg.jpg",
       "alt": "mix veg"
     },
     {
@@ -59,7 +59,7 @@
       "name": "Chana Masala",
       "para": "Delicious Chana Masala Veg made by experts",
       "price": 110,
-      "img": "/chana-masala.jpg",
+      "img": "/restaurantitems/chana-masala.jpg",
       "alt": "hotel madina chana masala"
     },
     {
@@ -67,7 +67,7 @@
       "name": "Shahi Paneer",
       "para": "Delicious Shahi Paneer made by experts",
       "price": 120,
-      "img": "/khoya-paneer.jpg",
+      "img": "/restaurantitems/khoya-paneer.jpg",
       "alt": "hotel madina shahi paneer"
     }
   ]

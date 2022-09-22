@@ -1,7 +1,6 @@
 {
-  "id": 3,
+  "id": 2,
   "name": "Triple Bed",
-  "price": 699,
-  "img": "/hotel-room-4.jpg",
+  "img": "/rooms/triple_bed.jpg",
   "alt": "hotel madina triple bed room"
 }

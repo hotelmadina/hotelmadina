@@ -6,7 +6,7 @@ const Rooms = ({ rooms }) => {
     <section className={styles.main_container}>
       <div className={`${styles.grid_container} container`}>
         <div className={styles.heading_container}>
-          <h2>Rooms & Pricing</h2>
+          <h2>Our Rooms</h2>
           <p>
             All our guestrooms are elegantly furnished with handmade furniture
             include luxury en-suite facilities with complimentary amenities
@@ -25,7 +25,6 @@ const Rooms = ({ rooms }) => {
 
                 <div className={styles.room_details}>
                   <h4>{room.name}</h4>
-                  <span>₹{room.price}</span>
                 </div>
               </div>
             );

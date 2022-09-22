@@ -23,41 +23,60 @@ const Gallery = ({ setToggleMenu }) => {
       <section className={styles.img_container}>
         <div className={`${styles.img_grid} container`}>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-1.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/main_gallery.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-2.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/hotel_design.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-3.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/main_gallery_1.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-4.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/hotel_design_1.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-5.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/double_bed.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-6.jpg" layout="fill" alt="gallery-image" />
-          </div>
-
-          <div className={styles.img_container}>
-            <Image src="/hotel-room-4.jpg" layout="fill" alt="gallery-image" />
-          </div>
-          <div className={styles.img_container}>
-            <Image src="/hotel-room-3.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/double_bed_ac.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-2.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/double_bed_1.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
           <div className={styles.img_container}>
-            <Image src="/hotel-room-5.jpg" layout="fill" alt="gallery-image" />
-          </div>
-          <div className={styles.img_container}>
-            <Image src="/hotel-room-6.jpg" layout="fill" alt="gallery-image" />
-          </div>
-          <div className={styles.img_container}>
-            <Image src="/hotel-room-1.jpg" layout="fill" alt="gallery-image" />
+            <Image
+              src="/rooms/triple_bed.jpg"
+              layout="fill"
+              alt="gallery-image"
+            />
           </div>
         </div>
       </section>
