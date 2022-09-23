@@ -19,6 +19,14 @@ export default function Home({ rooms, setToggleMenu }) {
           name="description"
           content="Hotel Madina is one of the best hotels in Jaipur City for Tourists as it is near almost all the Tourist Places in Jaipur. Hotel Madina gives you home like feeling with careful pricing."
         />
+
+        {/* Google Search Console Verification Tag */}
+
+        <meta
+          name="google-site-verification"
+          content="Q7LyAjvvcfPfWm65eXj8bXzQ6Nbod8Rr2tIIGZocsqY"
+        />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

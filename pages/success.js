@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "../styles/Success.module.scss";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Success = () => {
   const router = useRouter();
@@ -17,6 +18,9 @@ const Success = () => {
 
   return (
     <>
+      <Head>
+        <title>Success | Hotel Madina</title>
+      </Head>
       <section className={styles.image_slider}>
         <div className={styles.cta_container}>
           <h1>Your Message has been Successfully Sent!!</h1>
