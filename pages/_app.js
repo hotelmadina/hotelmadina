@@ -5,6 +5,7 @@ import { useState } from "react";
 import Copyright from "../components/Copyright";
 import Router from "next/router";
 import Loading from "../components/Loading";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps, router }) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -21,6 +22,9 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       {loading && <Loading />}
+      <Head>
+        <meta name="robots" content="index, follow" />
+      </Head>
       <div>
         <Navbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
         <Component
