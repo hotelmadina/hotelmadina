@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /success
+Allow: /
+sitemap: https://hotelmadina.com/sitemap.xml
+sitemap: http://hotelmadina.com/sitemap.xml
