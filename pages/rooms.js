@@ -1,14 +1,9 @@
 import styles from "../styles/Rooms.module.scss";
-import { useEffect } from "react";
 import Image from "next/image";
 import * as fs from "fs";
 import Head from "next/head";
 
-const Rooms = ({ setToggleMenu, rooms }) => {
-  useEffect(() => {
-    setToggleMenu(false);
-  }, []);
-
+const Rooms = ({ rooms }) => {
   return (
     <>
       <Head>
@@ -17,6 +12,39 @@ const Rooms = ({ setToggleMenu, rooms }) => {
           name="description"
           content="Rooms in Hotel Madina are super comfortable. We have almost all types of rooms. Single Bed, Four Bed, Triple Bed, AC, Non AC etc."
         />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <meta property="og:title" content="Rooms | Hotel Madina" />
+        <meta
+          property="og:description"
+          content="Rooms in Hotel Madina are super comfortable. We have almost all types of rooms. Single Bed, Four Bed, Triple Bed, AC, Non AC etc."
+        />
+        <meta property="og:site_name" content="Hotel Madina" />
+
+        <meta
+          name="google-site-verification"
+          content="Q7LyAjvvcfPfWm65eXj8bXzQ6Nbod8Rr2tIIGZocsqY"
+        />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="favicon_io/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="favicon_io/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="favicon_io/favicon-16x16.png"
+        />
+        <link rel="manifest" href="favicon_io/site.webmanifest" />
       </Head>
 
       <div className={styles.hero_img}>

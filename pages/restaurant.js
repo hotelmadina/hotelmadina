@@ -1,14 +1,9 @@
-import { useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Restaurant.module.scss";
 import * as fs from "fs";
 import Head from "next/head";
 
-const Restaurant = ({ setToggleMenu, ourMenu }) => {
-  useEffect(() => {
-    setToggleMenu(false);
-  }, []);
-
+const Restaurant = ({ ourMenu }) => {
   return (
     <>
       <Head>
@@ -17,6 +12,39 @@ const Restaurant = ({ setToggleMenu, ourMenu }) => {
           name="description"
           content="Hotel Madina Restaurant specially made for guests with amazing indian food varieties."
         />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <meta property="og:title" content="Restaurant | Hotel Madina" />
+        <meta
+          property="og:description"
+          content="Hotel Madina Restaurant specially made for guests with amazing indian food varieties."
+        />
+        <meta property="og:site_name" content="Hotel Madina" />
+
+        <meta
+          name="google-site-verification"
+          content="Q7LyAjvvcfPfWm65eXj8bXzQ6Nbod8Rr2tIIGZocsqY"
+        />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="favicon_io/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="favicon_io/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="favicon_io/favicon-16x16.png"
+        />
+        <link rel="manifest" href="favicon_io/site.webmanifest" />
       </Head>
 
       <div className={styles.hero_img}>

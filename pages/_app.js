@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false);
 
   Router.events.on("routeChangeStart", (url) => {
+    setToggleMenu(false);
     setLoading(true);
   });
 
@@ -22,16 +23,9 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       {loading && <Loading />}
-      <Head>
-        <meta name="robots" content="index, follow" />
-      </Head>
       <div>
         <Navbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-        <Component
-          {...pageProps}
-          toggleMenu={toggleMenu}
-          setToggleMenu={setToggleMenu}
-        />
+        <Component {...pageProps} />
         <Footer />
         <Copyright />
       </div>
