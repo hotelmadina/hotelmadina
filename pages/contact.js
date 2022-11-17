@@ -10,7 +10,7 @@ const Contact = () => {
         <title>Contact us | Hotel Madina</title>
         <meta
           name="description"
-          content="Contact us 24/7 and we will respond to you as soon as possible."
+          content="Contact us 24/7 and we will connect with you"
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
